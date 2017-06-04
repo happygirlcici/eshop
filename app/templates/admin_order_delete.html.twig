@@ -1,0 +1,78 @@
+{% extends "admin_panel.html.twig" %}
+
+{% block title %}Admin Order Delete{% endblock %}
+
+{% block content %}
+    <div class="left_content">  
+        <form method="post" enctype="multipart/form-data" >
+            <table id="rounded-corner">
+                <tr>
+                    <th colspan="4"><label>Order Delete, Order ID </label></th>
+                    <th colspan="2">{{v.ID}}</th> 
+                </tr>
+                <tr>
+                    <td><label>UserID</label></td>
+                    <td>{{v.userID}}</td>
+                    <td><label>name</label></td>
+                    <td>{{v.name}}</td> 
+                </tr>
+                <tr>
+                    <td><label>address</label></td>
+                    <td>{{v.adress}}</td>
+                    <td><label>PostalCode</label></td>
+                    <td>{{v.postalCode}}</td> 
+                </tr>
+                <tr>
+                    <td><label>email</label></td>
+                    <td>{{v.email}}</td>
+                    <td><label>phoneNumber</label></td>
+                    <td>{{v.phoneNumber}}</td>
+                </tr>
+                <tr>
+                    <td><label>totalBeforeTax</label></td>
+                    <td>{{v.totalBeforeTax}}</td> 
+                    
+                    <td><label>taxes</label></td>
+                    <td>{{v.taxes}}</td>
+                </tr>
+                <tr>
+                    <td><label>totalWithShippingAndTaxes</label></td>
+                    <td>{{v.totalWithShippingAndTaxes}}</td> 
+                    <td><label>dateTimePlaced</label></td>
+                    <td>{{v.dateTimePlaced}}</td>
+                </tr>
+                <tr>
+                    <td><label>dateTimeShipped</label></td>
+                    <td>{{v.dateTimeShipped}}</td>
+                    <td><label>shippingBeforeTax</label></td>
+                    <td>{{v.shippingBeforeTax}}</td>
+                </tr>
+                <tr>
+                    <td><label>status</label></td>
+                    <td>{{v.status}}</td>
+                </tr>
+            </table>
+
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br>
+                <input type="submit" id="button_manage" value="Delete Order"><br>
+
+                {% if error %}
+                    <p class="errorList">Add Order failed try again.</p>
+                {% endif %}
+
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+
+{% endblock content %}
+

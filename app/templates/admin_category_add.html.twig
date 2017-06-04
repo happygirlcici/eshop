@@ -1,0 +1,55 @@
+{% extends "admin_panel.html.twig" %}
+
+{% block title %}Admin Category Add{% endblock %}
+
+{% block content %}
+    <div class="left_content">  
+        <form method="post" enctype="multipart/form-data" >
+            <table id="rounded-corner">
+                <tr>
+                    <th colspan="2"><label>Category Management </label></th>
+                    <th colspan="2">{{v.ID}}</th> 
+                </tr>
+                <tr>
+                    <td><label>CategoryName</label></td>
+                    <td><input type="text" name="name" placeholder="Required name"  value="{{v.name}}" required="required" /></td>
+                    <td><label>ParentID</label></td>
+                    <td><input type="text" name="parent" placeholder="0" value="{{v.parent}}" /></td> 
+                </tr>
+                <tr>
+                    <td><label>Layer</label></td>
+                    <td><input type="text" name="layer" placeholder="Required Layer 1" value="{{v.layer}}" /></td>
+                    <td><label>Description</label></td>
+                    <td><input type="text" name="description" placeholder="description" value="{{v.description}}"/></td>
+                </tr>
+                <tr>
+                     
+                    <td><label>status</label></td>
+                    <td><input type="text" name="status" placeholder="OK" value="{{v.status}}" /></td>
+                    <td><label>PostDate</label></td>
+                    <td><input type="text" name="postDate" placeholder="PostDate" value="{{v.postDate}}" /></td>
+                </tr>
+            </table>
+
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br>
+                <br>
+                <br>
+                <button type="submit" id="button_manage" class ="bt_blue">{{operation}} Category</button><br>    
+                {% if error %}
+                    <p class="errorList">Add Category failed try again.</p>
+                {% endif %}
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+
+{% endblock content %}

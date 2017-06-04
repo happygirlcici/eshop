@@ -1,0 +1,70 @@
+{% extends "admin_panel.html.twig" %}
+
+{% block title %}Admin User Add{% endblock %}
+
+{% block content %}
+    <div class="left_content">  
+        <form method="post" enctype="multipart/form-data" >
+            <table id="rounded-corner">
+                <tr>
+                    <th colspan="4"><label>User </label></th>
+                    <th colspan="2">{{v.ID}}</th> 
+                </tr>
+                <tr>
+                    <td><label>Username</label></td>
+                    <td>{{v.username}}</td>
+                    <td><label>FirstName</label></td>
+                    <td>{{v.fname}}</td> 
+                    <td><label>LastName</label></td>
+                    <td>{{v.lname}}</td>
+                </tr
+                <tr>
+                    <td><label>Email</label></td>
+                    <td>{{v.email}}</td> 
+                    <td><label>Phone</label></td>
+                    <td>{{v.phone}}</td>
+                    <td><label>City</label></td>
+                    <td>{{ v.city}}</td>
+                </tr>
+                <tr>
+                    <td><label>Address1</label></td>
+                    <td>{{ v.addressLine1}}</td> 
+                    <td><label>Address2</label></td>
+                    <td>{{v.addressLine2 }}</td> 
+                    <td><label>State</label></td>
+                    <td>{{v.state}}</td>
+                </tr>
+                <tr>
+                    <td><label>Province Code</label></td>
+                    <td>{{v.code}}</td> 
+                    <td><label>User Role</label></td>
+                    <td>{{v.role}}</td> 
+                    <td><label>Status</label></td>
+                    <td>{{v.status}}</td>
+                </tr>
+                
+            </table>
+
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br><br>
+                <button type="submit" id="button_manage" >Delete this User</button><br>
+
+                {% if error %}
+                    <p class="errorList">Register failed try again.</p>
+                {% endif %}
+
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+
+{% endblock content %}
+

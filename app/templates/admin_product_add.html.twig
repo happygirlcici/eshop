@@ -1,0 +1,82 @@
+{% extends "admin_panel.html.twig" %}
+
+{% block title %}Admin Products{% endblock %}
+
+{% block content %}
+    <div class="left_content" >  
+        <form method="post" enctype="multipart/form-data" >
+            <table id="rounded-corner" >
+                <tr>
+                    <th colspan="2"><label>Product ID </label></th>
+                    <th colspan="2">{{v.ID}}</th>
+                </tr>
+                <tr>
+                    <td><label>Product Name</label></td>
+                    <td><input type="text" name="name" placeholder="name"  required="required" value="{{v.name}}" /></td>
+                    <td><label>Product Title</label></td>
+                    <td><input type="text" name="title" placeholder="title"  required="required" value="{{v.title}}"/></td>
+                </tr>
+                <tr>
+                    <td><label>Category Id</label></td>
+                    <td><input type="text" name="catID" value="{{v.catID}}"/></td>
+                    <td><label>BarCode</label></td>
+                    <td><input type="text" name="code" placeholder="12315632409862" value="{{v.code}}"/></td>
+                </tr>
+                <tr>
+                    <td><label>Model Name</label></td>
+                    <td><input type="text" name="modelName" value="{{v.modelName}}"/></td>
+                    <td><label>Model NO.</label></td>
+                    <td><input type="text" name="modelNo" placeholder="001" value="{{v.modelNo}}"/></td>
+                </tr>
+                <tr>
+                    <td><label>Description 1</label></td>
+                    <td><input type="text" name="desc1" value="{{v.desc1}}"/></td>
+                    <td><label>Description 2</label></td>
+                    <td><input type="text" name="desc2" value="{{v.desc2}}" /></td>
+                </tr>
+                <tr>
+                    <td><label>Price</label></td> 
+                    <td><input type="text" name="price" placeholder="price" required="required" value="{{v.price}}" /> CDN$</td> 
+                    <td><label>Discount</label></td>
+                    <td><input type="text" name="discount" placeholder="100%" value="{{v.discount}}"/></td>
+                </tr>
+                <tr>
+                    <td><label>Quantity(Stock)</label></td>
+                    <td><input type="text" name="stock" placeholder="stock" required="required" value="{{v.stock}}"/></td>
+                </tr>
+                <tr>
+                    <td><label>Image Upload</label></td>
+                    <td colspan="2"><img src="data:image/jpeg;base64,{{image1}}" width="230" height="200"></td>
+                    <td><input type="file" name="image"></td> 
+                </tr>
+                <tr>  
+                    <td><label>Image2 Upload</label></td>
+                    <td colspan="2"><img src=data:image/jpeg;base64,{{image2}}"" width="230" height="200"></td>
+                    <td><input type="file" name="image2"></td>
+                </tr>
+            </table>    
+
+            <input type="submit" id="button_manage" class ="bt_blue" value="{{operation}} product"><br>    
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br>
+
+                {% if error %}
+                    <p class="errorList">Register failed try again.</p>
+                {% endif %}
+
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+
+{% endblock content %}
+
+

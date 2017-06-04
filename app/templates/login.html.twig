@@ -1,0 +1,68 @@
+{% extends "master.html.twig" %}
+{% block title %}Login{% endblock %}
+
+{% block headExtra %}
+    <link href="/css/bootstrap-social.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="wow bounceInUp">
+                    <br>
+                    <br>                      
+                    <img src="/images/model02.png" class="img-responsive" width="480" height="540">
+                </div>
+            </div>
+
+            <div class="col-md-6">    
+                <div class="wow fadeIn">                        
+                    <!--<h2>Welcome to our company</h2>-->
+                    <div class="login">
+                        <h1 class="login-heading">
+                            Log in to Blue Scooter
+                        </h1>
+                        <hr>
+
+                        <form method="post">
+                            <div class="form-group">
+                                <label>User Name</label><br>
+                                <input type="text" name="name" placeholder="username" class="login_form input-txt" required="required" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label><br>
+                                <input type="password" name="pass" placeholder="password" class="login_form input-txt" required="required" />
+                            </div>    
+                            <div class="login-footer">
+                                <button type="submit" class="btn-lg btn-primary col-xs-2 col-md-2">Log in</button>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/passreset">Forget password?</a>
+                                <a class="btn-lg btn-social-icon btn-twitter col-xs-1 col-md-1 pull-right">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a class="btn-lg btn-social-icon btn-google col-xs-1 col-md-1 pull-right">
+                                    <span class="fa fa-google"></span>
+                                </a>
+                                <a class="btn-lg btn-social-icon btn-instagram col-xs-1 col-md-1 pull-right">
+                                    <span class="fa fa-instagram"></span>
+                                </a>
+                                <a href="{{FBLoginUrl}}" class="btn-lg btn-social-icon btn-facebook col-xs-1 col-md-1 pull-right" >
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                                {% if error %}
+                                    <p class="errorList">Login failed try again.</p>
+                                {% endif %}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.row -->
+    </div>
+    <hr>
+    
+{% endblock content %}
+

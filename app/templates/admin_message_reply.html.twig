@@ -1,0 +1,75 @@
+{% extends "admin_panel.html.twig" %}
+
+{% block title %}Admin Category Add{% endblock %}
+
+{% block content %}
+    
+    <div class="left_content" >  
+        <form method="post" enctype="multipart/form-data" >
+            
+            <table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+                <tr>
+                    <th colspan="2"><label>Message ID </label></th>
+                    <th colspan="2">{{v.ID}}</th>  
+                </tr>
+                <tr>
+                    <td><label>Customer Name</label></td>
+                    <td><input type="text" name="name" placeholder="name"  required="required" value="{{v.name}}" /></td>
+                    <td><label>Post Date</label></td>
+                    <td><input type="text" name="postDate" placeholder="postDate"  required="required" value="{{v.postDate}}" /></td>
+                </tr>
+                
+                <tr>
+                    <td><label>Customer email</label></td>
+                    <td><input type="text" name="email" placeholder="name"  required="required" value="{{v.email}}" /></td>
+                    <td><label>Customer phone</label></td>
+                    <td><input type="text" name="phone" placeholder="phone"  value="{{v.phone}}"/></td>
+                </tr>          
+                <tr>                   
+                    <td><label>Status</label></td>
+                    <td><input type="text" name="status" placeholder="status"  value="{{v.status}}"/></td>
+                    <td><label>Creat Date</label></td>
+                    <td><input type="text" name="createDate" placeholder="createDate"  value="{{v.createDate}}"/></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="1"><label>Message Subject</label></td>
+                    <td colspan="3"><input type="text" name="subject" placeholder="subject"  required="required" value="{{v.subject}}"/></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><label>Customer message</label></td>
+                    <td colspan="3"><input type="text" name="message" placeholder="name"  required="required" value="{{v.message}}" /></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="1"><label>Response</label></td>
+                    <td colspan="3">
+                    <textarea rows="4" cols="50" name="response" required="required" >
+
+                    </textarea></td>
+                </tr>
+                
+            </table>    
+
+            <input type="submit" id="button_manage" class ="bt_blue" value="Replay Message"><br>    
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br>
+
+                {% if error %}
+                    <p class="errorList">Register failed try again.</p>
+                {% endif %}
+
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+    
+{% endblock content %}

@@ -1,0 +1,66 @@
+{% extends "admin_panel.html.twig" %}
+{% block title %}Admin Products{% endblock %}
+{% block content %}
+    <div class="left_content" >  
+        <form method="post" enctype="multipart/form-data" >
+            <table id="rounded-corner">
+                <tr>
+                    <th colspan="4"><label>Product ID </label></th>
+                    <th colspan="2">{{ p.ID }}</th> 
+                </tr>
+                <tr>
+                    <td><label>Product Name</label></td>
+                    <td>{{ p.name }}</td>
+                    <td><label>Product Title</label></td>
+                    <td>{{ p.title }}</td>
+                    <td><label>Category Id</label></td>
+                    <td>{{ p.category }}</td> 
+                </tr>
+                <tr>
+                    <td><label>Model Name</label></td>
+                    <td>{{ p.modelName }}</td>
+                    <td><label>Model NO.</label></td>
+                    <td>{{ p.modelNo }}</td>
+                    <td><label>Code</label></td>
+                    <td>{{ p.code }}</td> 
+                </tr>
+                <tr>
+                    <td><label>Description 1</label></td>
+                    <td>{{ p.desc1 }}</td>
+                    <td><label>Description 2</label></td>
+                    <td>{{ p.desc2 }}</td>
+                </tr>
+                <tr>
+                    <td><label>Price</label></td> 
+                    <td>{{ p.price }} CDN$</td> 
+                    <td><label>Discount</label></td>
+                    <td>{{ p.discount }} </td>
+                    <td><label>Quantity(Stock)</label></td>
+                    <td>{{ p.stock }}</td>
+                </tr>
+
+            </table>
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br><br><br>
+                <button type="submit" id="button_manage">Delete this Product</button><br>
+
+                {% if error %}
+                    <p class="errorList">Register failed try again.</p>
+                {% endif %}
+
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+
+{% endblock content %}
+
+

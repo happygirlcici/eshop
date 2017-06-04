@@ -1,0 +1,152 @@
+{% extends "master.html.twig" %}
+
+{% block title %}about{% endblock %}
+
+{% block headExtra %}
+    <link rel="stylesheet" type="text/css" href="/css/wtstyles.css" />
+{% endblock %}
+
+{% block content %}
+
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <section class="section-title">
+        <div class="container">        
+            <h1> SERVICES <small>  WHAT DO WE DO? </small></h1>        
+        </div>    
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">            
+                <div class="col-md-12">
+                    <img src="/images/people.jpg" class="img-responsive" alt="people"/>  
+                </div>             
+            </div> <!-- /.row -->
+
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="page-header"> Our Services </h2>
+                    <p>We provide electric vehicle rental services for personal and business activities. If you want to experience the future-tech electric personal transportation, or your company wants to show the company strength and forward-looking vision to your costumers in the business activities, you can contact us, we are willing to use the best service to bring you satisfaction. We can also provide industrial battery-pack designing services and customization services, if your products or equipment need non-standard lithium battery-pack, we can tailor the lithium battery-pack for your product or equipment according to the technical parameters that you provide.</p>                    
+                </div>
+
+                <div class="col-md-4">
+                    <h2 class="page-header"> Want More? </h2>
+                    <p>If your products or equipment need non-standard lithium battery-pack, we can tailor the lithium battery-pack</p> 
+                    <a href="#!" class="btn btn-primary">Read More</a>
+
+                </div>
+            </div> <!-- /.row -->
+
+            <div class="row">
+                <div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Service 1</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Service 2</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Service 3</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Service 4</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <h3>Vehicle Rental</h3>
+                            <p><i class="fa fa-star pull-left fa-4x"></i>
+                                We provide electric vehicle rental services for personal and business activities.</p>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <h3>Buy Directly</h3>
+                            <p><i class="fa fa-lock pull-left fa-4x"></i>
+                               In our online shop or our local store , you can try and buy directly.</div>
+
+                        <div role="tabpanel" class="tab-pane" id="messages">
+                            <h3>Just Try</h3>
+                            <p> <i class="fa fa-rss pull-left fa-4x"></i>
+                                If you want to experience the future-tech electric personal transportation, or your company wants to show the company strength and forward-looking vision to your costumers in the business activities, you can contact us</p>  
+                        
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="settings">
+                            <h3>Personal Tailor</h3>                
+                            <p><i class="fa fa-headphones pull-left fa-4x"></i>
+                                Shank frankfurter porchetta ribs pastrami. Rump pancetta tip andouillette, doner 
+                                capicola tip meatball, shankle kevin capicola kielbasa, pancetta loin porchetta 
+                                tip pig cow ribs jowl bacon tip cow drumstick bierschinken pig cow drumstick 
+                                braunschweiger, turkey ham brisket pig chop. Salami pig hamburger, ham ham hock 
+                                tongue filet, rump tri-tip venison, hamburger boudin jerky ham filet, brisket 
+                                steak pancetta ham tongue shoulder landjaeger, ham fatback braunschweiger tip 
+                                round porchetta ham bresaola. Ham andouille tip tri-tip, pig steak andouille 
+                                hamburger, tip chuck swine tip fatback, venison tail brisket drumstick. Tip pork 
+                                filet tip drumstick. Chicken ribs brisket meatball, ham steak andouillette.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header">Service Images</h2>
+                </div>
+
+                <div class="col-sm-4">
+                    <img class="img-responsive img-thumbnail" src="/images/flower1.png">
+                    <h3>Service One</h3>
+                    <p>Service one description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst.</p>
+                    <a class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a>
+                </div>
+
+                <div class="col-sm-4">
+                    <img class="img-responsive img-thumbnail" src="/images/service2.jpg">
+                    <h3>Service Two</h3>
+                    <p>Service two description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst.</p>
+                    <a class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a>
+                </div>
+
+                <div class="col-sm-4">
+                    <img class="img-responsive img-thumbnail" src="/images/service3.jpg">
+                    <h3>Service Three</h3>
+
+                    <a class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a>
+                </div>
+                </div>
+               <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header"> </h2>
+                </div>
+                <div>
+                    <div class="weather-app">
+                        <div class="left">
+                            <div class="temperature"><span id="temperature">0</span>&deg;F</div> 
+                            <div class="location"><span id="location">Unknown</span></div>
+                        </div>	
+                        <div >
+                            <div class="top">
+                                <img id="icon" width="1px" src="/images/imgs/codes/300.png" />
+                                <img id="icon" width="80px" src="/images/imgs/codes/200.png" />
+                            </div>
+
+                            <div class="bottom">
+
+                                <div class="humidity">
+                                    <img src="/images/imgs/humidity.png" height="16px" />
+                                    <span id="humidity">0</span>%
+                                </div>
+
+                                <div class="wind">
+                                    <span id="wind">0</span> mph <span id="direction">N</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div> <!-- /.container -->
+    </section>      
+
+{% endblock content %}
+
+

@@ -1,0 +1,86 @@
+{% extends "master.html.twig" %}
+
+{% block title %}index{% endblock %}
+
+{% block headExtra %}
+    <link href="/css/homepage.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1>Welcome to our Online Shop!</h1>
+            <p>You can choose whatever you like and just click a mouse, simple and quickly. </p>
+            <p>
+                <a href="/register" class="btn btn-primary btn-right">Register</a>
+                <a href="/login" class="btn btn-primary btn-right">Login</a>
+{#                <a href="/admin_panel" class="btn btn-primary btn-right">Admin Panel</a>#}
+            </p>
+        </header>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Latest Features</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="/images/moto2.jpg" alt="">
+                    <div class="caption">
+                        <h3>Electric Bicycle</h3>
+                        <p>Electric Bicycle</p>
+                        <p>
+                            <a href="/category" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="/images/moto1.png" alt="">
+                    <div class="caption">
+                        <h3>Electric Ecooter</h3>
+                        <p>Electric Ecooter</p>
+                        <p>
+                            <a href="/category" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="/images/bike.png" alt="">
+                    <div class="caption">
+                        <h3>Ecooter</h3>
+                        <p>Ecooter</p>
+                        <p>
+                            <a href="/category" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="/images/bike01.png" alt="">
+                    <div class="caption">
+                        <h3>Sportif Scooter</h3>
+                        <p>Sportif Scooter</p>
+                        <p>
+                            <a href="/category" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    {% endblock content %}

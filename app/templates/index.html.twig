@@ -1,0 +1,152 @@
+{% extends "master.html.twig" %}
+
+{% block title %}index{% endblock %}
+
+{% block content %}
+
+    <section class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="animated fadeInLeft"><!-- *** -->
+                        <h1>Blue Energy</h1>
+                        <p class="lead">
+                            Blue Energy is committed to develop and promote of zero emissions, intelligent, personal urban transportation. We provide the most 
+                            suitable green transportation according to costumers needs. 
+                            Our products make the city more beautiful and make your trip more pleasant and stylish. 
+                            The urban traffic in today's society has always been a daunting problem, how to reduce the pollution of automobile exhaust emissions, 
+                            how to reduce the city noise pollution, how to improve the efficiency of urban commuting, etc., are urgent problems to be solved. 
+                            
+                        </p>
+                        <a class="btn btn-primary btn-lg" href="#!">Find Out More</a>
+                    </div><!-- *** -->  
+                </div> <!-- /.col-md-7 -->
+
+                <div class="col-md-5">
+                    <div class="animated fadeInUp">
+                        <img src="/images/moto.png" alt="moto"/>
+                        
+                    </div>
+                </div> <!-- /.col-md-5 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section> <!-- /.jumbotron -->
+
+    <section class="section-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-3 text-center">
+                    <!-- FROM THE FONT AWESOME EXAMPLES -->
+                    <span class="fa-stack fa-lg fa-4x">
+                        <i class="fa fa-circle fa-stack-2x fa-color"></i>
+                        <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+                    </span>   
+                    <h3>Good Quality</h3>
+                </div>
+
+                <div class="col-sm-3 col-md-3 text-center">
+                    <!-- FROM THE FONT AWESOME EXAMPLES -->
+                    <span class="fa-stack fa-lg fa-4x">
+                        <i class="fa fa-circle fa-stack-2x fa-color"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span> 
+                    <h3>Online Shop</h3>
+                </div>
+
+                <div class="col-sm-3 col-md-3 text-center">
+                    <!-- FROM THE FONT AWESOME EXAMPLES-->
+                    <span class="fa-stack fa-lg fa-4x">
+                        <i class="fa fa-circle fa-stack-2x fa-color"></i>
+                        <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
+                    </span>  
+                    <h3>Video Show</h3>
+                </div>
+
+                <div class="col-sm-3 col-md-3 text-center">
+                    <!-- FROM THE FONT AWESOME EXAMPLES -->
+                    <span class="fa-stack fa-lg fa-4x">
+                        <i class="fa fa-circle fa-stack-2x fa-color"></i>
+                        <i class="fa fa-gear fa-stack-1x fa-inverse"></i>
+                    </span>  
+                    <h3>Customizable</h3>
+                </div>                    
+            </div>
+        </div>
+    </section>  
+    <section>
+        <div class="container">
+            <div class="center_block">
+            {% if newsList %}
+                {% for n in newsList %}
+                    <h3>{{ n.subject }}</h3>
+                    <p >{{ n.content }}</p>
+                {% endfor %}
+            {% endif%}
+            </div>
+        </div>
+    </section>
+    <section class="section-secondary slogan">
+        <div class="container">
+            <h2>Take a closer look</h2>
+            <p>Visit us in-store to try our exclusive brand new scooter and preview our cool collection. 
+                To meet city people's needs we have designed three categories of zero-emission intelligent 
+                city personal transportation: Short-distance Transfer vehicles; Short-distance Power Assist vehicles; 
+                Long-distance pure electric vehicles. Our products look stylish, exquisite design, and excellent quality. 
+                There will always be a suitable for your city fashion green travel. </p>
+            <p>To meet these needs we have designed three categories of zero-emission intelligent city personal transportation: 
+                            Short-distance Transfer vehicles; Short-distance Power Assist vehicles; Long-distance pure electric vehicles. 
+                            Our products look stylish, exquisite design, and excellent quality. There will always be a suitable for your city fashion green travel. </p>
+            <a href="/about" class="btn btn-lg btn-default">More Info</a> 
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="wow fadeInLeft">
+                        <h2 class="page-header">Powerful electric bike and mountain bike</h2>
+                        <ul class="featured-list">
+                            <li> <i class="glyphicon glyphicon-ok"></i> Electric Bike </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> Electric Mountain Bike </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> City Scooters </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> Mobile bike &amp; Content</li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> Totally <strong>FREE</strong> to use </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> Wheel chairs.</li>           
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="wow fadeInRight">                    
+                        <img src="images/bike.png" alt="bike" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </section>  
+
+    <section class="section-primary">
+        <div class="container">
+            <div class="row">
+                <div class="wow fadeIn">                
+                    <div class="col-md-6">                    
+                        <img class="img-responsive img-circle" src="images/sample1.jpg" alt="macbook">          
+                    </div>
+
+                    <div class="col-md-6">
+                        <h2 class="page-header">More Features Include...</h2>
+                        <ul class="featured-list">
+                            <li> <i class="glyphicon glyphicon-ok"></i> Mobility Scooters </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> mobility Sport Bike </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> Free Style Bike </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> Unstyled: Add Your Own Style &amp; </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> 100% <strong>FREE</strong> to use </li>
+                            <li> <i class="glyphicon glyphicon-ok"></i> Cutomerize </li>           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </section>
+    
+{% endblock content %}

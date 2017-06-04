@@ -1,0 +1,74 @@
+1. I implemented Alpha, Beta and even Gamma
+2. I will implent Theta, Zeta, Yota today
+3. I desperately need help from the teacher to learn
+how to use Micro-Gamma expressions to solve ...
+
+--- May 12 Chen Chen
+1. Edit the proposal.doc
+2. get the picture of our application 
+3. will design user story
+
+--- May 12 Jun Yang
+1. Find Bootstrap template
+2. Intergrate Bootstrap template with Twig
+
+--- May 13 Chen Chen
+1. Continue edit the proposal
+2. Finished create database on Azure
+
+--- May 14 YangJun
+1. Integrate the Bootstrap template 
+
+--- May 15 Chen Chen
+1. finish the proposal.doc
+2. implement database design  
+
+--- May 15 Yang Jun
+1 Finish the integration of Bootstrap template with Twig
+2 Begin design administratio panel 
+
+--- May 16 Chen Chen
+1. design website eshop.html login in and register 
+2. start to design cart 
+
+--- May 16 YangJun
+1. continue design administratio panel
+
+May 17 Chen Chen
+1 Finished Edit admin panel
+2 start facebook login
+
+
+May 18 Chen Chen
+1 finish Management Product /html/admin.php/admin_product_add.php
+2 start Add product
+
+May 19 Chen Chen
+Modify database product table sql
+
+May 20 Chen Chen
+Start to do admin_pannel manage user
+finished user/category/orders/management
+
+May 20 Chen Chen
+Start to do admin_pannel message management
+
+May 21 ChenChen
+finished admin_pannel message management
+start to admin panel admin_product_edit
+start to admin panel admin_product_delete
+
+May 21 ChenChen
+finished admin_pannel message management
+start to admin panel admin_product_edit
+start to admin panel admin_product_delete
+
+May 22 ChenChen
+finished admin_pannel add news management
+finished admin panel admin_product_edit
+finished admin panel admin_product_delete
+
+May 23 ChenChen
+redo admin panel ->product management (add edit and delete) ; 
+redo admin panel -> category management (add edit )
+

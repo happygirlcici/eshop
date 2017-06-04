@@ -1,0 +1,116 @@
+<head>    
+    <title>{% block title %}{% endblock %}</title>
+    {% block headExtra %}
+        <link rel="stylesheet" type="text/css" href="/css/admin.css" />
+    {% endblock %}
+</head>
+
+<body>
+    <div id="main_container">
+        <div class="header">
+            <div class="logo"><a href="#"><img src="/images/logo.png" alt="logo" title="" border="0" /></a></div>
+            <div class="right_header">Welcome {{ eshopuser.name }}, <a href="#">Visit site</a> | <a href="#" class="messages">(3) Messages</a> | <a href="/logout" class="logout">Logout</a></div>
+            <div id="clock_a"></div>
+        </div>
+        <div class="main_content">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Manage Users</a>
+                        <ul>
+                            <li><a href="/admin/user/add" title="">Add User</a></li>
+                                {#                            <li><a href="/admin/user/edit" title="">Edit User</a></li>#}
+                                {#                            <li><a href="/admin/user/delete" title="">Delete User</a></li>#}
+                            <li><a href="/admin/user/list" title="">List User</a></li>
+                            <li><a href="/admin/user/block" title="">Block User</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/admin/category/list">Manage Categories</a>
+                        <ul>
+                            <li><a href="/admin/category/add" title="">Add Category</a></li>
+                                {#                            <li><a href="/admin/category/edit" title="">Edit Category</a></li>#}
+                                {#                            <li><a href="/admin/category/delete" title="">Delete Category</a></li>#}
+                            <li><a href="/admin/category/list" title="">List Category</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/admin/product/list">Manage Products</a>
+                        <ul>
+                            <li><a href="/admin/product/add" title="">Add Product</a></li>
+                            <li><a href="/admin/product/list" title="">List Product</a></li>
+                                {#                            <li><a href="/admin/product/edit" title="">Edit Products</a></li>#}
+                                {#                            <li><a href="" title="">Search Products</a></li>#}
+                        </ul>
+                    </li>
+                    <li><a href="#">Manage Orders</a>
+                        <ul>
+                            <li><a href="/admin/order/add" title="">Add Order</a></li>
+                                {#                            <li><a href="/admin/order/edit" title="">Edit Order</a></li>#}
+                                {#                            <li><a href="/admin/order/delete" title="">Delete Order</a></li>#}
+                            <li><a href="/admin/order/list" title="">List Order</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/admin_report">Sales Report</a>
+                        <ul>
+                            <li><a href="/admin_report_monthly" title="">Monthly Sales Report</a></li>
+                            <li><a href="/admin_report_lastmonth" title="">Last Monthly Sales Report</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li><a href="/admin_message">Other Management</a>
+                        <ul>
+                            <li><a href="/admin_message" title="">Message Management</a></li>
+                            <li><a href="/admin_news_add" title="">Add News</a></li>
+                            
+                            <li><a href="" title="">Back To Home</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> 
+            <div id="content">
+                {% block content %}
+                    <div class="center_block"> 
+                        <h1>Weclome To Administrator Panel </h1> 
+                        
+                    </div>
+                {% endblock content %}
+            </div>
+            <div class="clear"></div>
+        </div> <!--end of main content-->    
+        <div class='footer'>            
+            <div class="left_footer"><p>Copyright &copy; 2017 - <a href="#" style="text-decoration: none" >Blue Scooter</a></p></div>
+            <div class="right_footer"><p><a href="#" style="text-decoration: none">Blue Energy</a></p></div>
+        </div>   
+    </div>
+    <script type="text/javascript" src="/scripts/admin/clockp.js"></script>
+    <script type="text/javascript" src="/scripts/admin/clockh.js"></script> 
+    <script type="text/javascript" src="/scripts/admin/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/admin/ddaccordion.js"></script>
+    <script type="text/javascript">
+        ddaccordion.init({
+            headerclass: "submenuheader", //Shared CSS class name of headers group
+            contentclass: "submenu", //Shared CSS class name of contents group
+            revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+            mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+            collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+            defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+            onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+            animatedefault: false, //Should contents open by default be animated into view?
+            persiststate: true, //persist state of opened contents within browser session?
+            toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+            togglehtml: ["suffix", "<img src='../images/admin/plus.gif' class='statusicon' />", "<img src='../images/admin/minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+            animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+            oninit: function (headers, expandedindices) { //custom code to run when headers have initalized
+                //do nothing
+            },
+            onopenclose: function (header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+                //do nothing
+            }
+        })
+    </script>
+    <script type="text/javascript" src="/scripts/admin/jconfirmaction.jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ask').jConfirmAction();
+        });
+    </script>    
+</body>
+</html>

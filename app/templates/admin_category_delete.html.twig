@@ -1,0 +1,52 @@
+{% extends "admin_panel.html.twig" %}
+
+{% block title %}Admin Category Add{% endblock %}
+
+{% block content %}
+    <div class="left_content">  
+        <form method="post" enctype="multipart/form-data" >
+            <table id="rounded-corner">
+                <tr>
+                    <th colspan="4"><label>Category Management </label></th>
+                    <th colspan="2">{{v.ID}}</th> 
+                </tr>
+                <tr>
+                    <td><label>CategoryName</label></td>
+                    <td>{{v.name}}</td>
+                    <td><label>ParentID</label></td>
+                    <td>{{v.parent}}</td> 
+                    <td><label>Layer</label></td>
+                    <td>{{v.layer}}</td>
+                </tr>
+                <tr>
+                    <td><label>Description</label></td>
+                    <td>{{v.description}}</td> 
+                    <td><label>status</label></td>
+                    <td>{{v.status}} </td>
+                    <td><label>PostDate</label></td>
+                    <td>{{v.postDate}} </td>
+                </tr>
+            </table>
+
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br>
+                <button type="submit" id="button_manage">Delete Category</button><br>
+
+                {% if error %}
+                    <p class="errorList">Delete Category failed try again.</p>
+                {% endif %}
+
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+
+{% endblock content %}

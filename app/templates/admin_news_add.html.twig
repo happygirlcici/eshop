@@ -1,0 +1,49 @@
+{% extends "admin_panel.html.twig" %}
+
+{% block title %}Add Lastest News{% endblock %}
+
+{% block content %}
+    <div class="left_content">  
+        <form method="post" enctype="multipart/form-data" >
+            <table id="rounded-corner">
+                <tr>
+                    <th colspan="4"><label>News Management </label></th>
+                    <th colspan="2">{{v.ID}}</th> 
+                </tr>
+                <tr>
+                    <td><label>Subject</label></td>
+                    <td><input type="text" name="subject" placeholder="Required"  required="required" /></td>
+                </tr>
+                <tr>
+                    <td><label>Content</label></td>
+                    <td><input type="text" name="content" placeholder="Required"  /></td>
+                </tr>
+                <tr>
+                    <td><label>status</label></td>
+                    <td><input type="text" name="status" placeholder="status" /></td>
+                </tr>
+            </table>
+
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br>
+                <button type="submit" id="button_manage">News Management</button><br>
+
+                {% if error %}
+                    <p class="errorList">Add news failed try again.</p>
+                {% endif %}
+
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+
+{% endblock content %}
+

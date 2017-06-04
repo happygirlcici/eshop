@@ -1,0 +1,78 @@
+{% extends "admin_panel.html.twig" %}
+
+{% block title %}Admin Order Add{% endblock %}
+
+{% block content %}
+    <div class="left_content">  
+        <form method="post" enctype="multipart/form-data" >
+            <table id="rounded-corner">
+                <tr>
+                    <th colspan="4"><label>Order Management </label></th>
+                    <th colspan="2">{{v.ID}}</th> 
+                </tr>
+                <tr>
+                    <td><label>UserID</label></td>
+                    <td><input type="text" name="userID" placeholder="Required userID"  required="required" value="{{v.userID}}"/></td>
+                    <td><label>name</label></td>
+                    <td><input type="text" name="name" placeholder="0" value="{{v.name}}" /></td> 
+                </tr>
+                <tr>
+                    <td><label>address</label></td>
+                    <td><input type="text" name="address" placeholder="Required address" value="{{v.adress}}" /></td>
+                    <td><label>PostalCode</label></td>
+                    <td><input type="text" name="postalCode" placeholder="PostalCode" value="{{v.postalCode}}"/></td> 
+                </tr>
+                <tr>
+                    
+                    <td><label>email</label></td>
+                    <td><input type="text" name="email" placeholder="email" value="{{v.email}}"/></td>
+                    <td><label>phoneNumber</label></td>
+                    <td><input type="text" name="phoneNumber" placeholder="phoneNumber" value="{{v.phoneNumber}}" /></td>
+                </tr>
+                <tr>
+                    <td><label>totalBeforeTax</label></td>
+                    <td><input type="text" name="totalBeforeTax" placeholder="totalBeforeTax" value="{{v.totalBeforeTax}}"/></td> 
+                    
+                    <td><label>taxes</label></td>
+                    <td><input type="text" name="taxes" placeholder="taxes" value="{{v.taxes}}"/></td>
+                </tr>
+                <tr>
+                    <td><label>totalWithShippingAndTaxes</label></td>
+                    <td><input type="text" name="totalWithShippingAndTaxes" placeholder="totalWithShippingAndTaxes" value="{{v.totalWithShippingAndTaxes}}"/></td> 
+                    <td><label>dateTimePlaced</label></td>
+                    <td><input type="text" name="dateTimePlaced" placeholder="dateTimePlaced" value="{{v.dateTimePlaced}}"/></td>
+                </tr>
+                <tr>
+                    <td><label>dateTimeShipped</label></td>
+                    <td><input type="text" name="dateTimeShipped" placeholder="dateTimeShipped" value="{{v.dateTimeShipped}}"/></td>
+                    <td><label>shippingBeforeTax</label></td>
+                    <td><input type="text" name="shippingBeforeTax" placeholder="shippingBeforeTax" value="{{v.shippingBeforeTax}}"/></td>
+                </tr>
+                <tr>
+                    <td><label>status</label></td>
+                    <td><input type="text" name="status" placeholder="status" value="{{v.status}}"/></td>
+                </tr>
+            </table>
+
+            <div class="login-footer">
+                <div class ="error-message">
+                    {% if errorList %}
+                        <ul class="errorList">
+                            {% for error in errorList %}
+                                <li>{{ error }}</li>
+                                {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <br>
+                <input type="submit" id="button_manage" value="{{operation}} order"><br>
+
+                {% if error %}
+                    <p class="errorList">Add Order failed try again.</p>
+                {% endif %}
+
+            </div> <!--login-footer-->
+        </form>
+    </div>   <!--end of center content --> 
+{% endblock content %}
+
